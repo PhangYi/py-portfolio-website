@@ -1,0 +1,467 @@
+/*Font Option starts here*/
+@font-face {
+    font-family: 'PermanentMarker';
+    src: url(font/PermanentMarker-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'CenturyGothicBold';
+    src: url(font/GOTHICB.ttf);
+}
+/*Font Option ends here*/
+
+/*Columns and Rows start here*/
+.row {
+    width: 1280px;
+}
+
+.box {
+    width: 1280px;
+    height: 720px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-left: 8%;
+}
+/*Columns and Rows end here*/
+
+/*Backgrond starts here*/
+.bg {
+        background-image: url(images/portfoliobg.png);
+        margin-bottom: -10%;
+        margin-top: -10px;
+        margin-left: -8px;
+        margin-right: -8px;
+}
+/*Backgrond ends here*/
+
+/*Navigation bar stuffs start here*/
+.topbar { 
+    border-bottom: 2px solid black;
+    margin-left: 8%;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 10px;
+    margin-bottom: -1.5%; 
+}
+
+.logo li {
+    list-style-type: none;
+}
+
+.logo li a {
+    text-decoration: none;
+    font-family: PermanentMarker;
+    color: white;
+    font-size: 160%;
+    position: relative;
+    bottom: -2px;
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    height: auto;
+    margin-top: -2%;
+}
+
+.navbar li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 20px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-family: montserrat;
+    position: relative;
+}
+
+.nav_link:hover {
+    color: #9FB2F3;
+}
+
+.nav_link::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    background: #9FB2F3;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    opacity: 0;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+.nav_link:hover::after {
+    opacity: 1;
+    width: 100%;
+}
+/*Navigation bar stuffs end here*/
+/*Dropdown Buttons for Portfolio start here*/
+.dropdown {
+      position: relative;
+      display: contents;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #D9D9D9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: -8px;
+    margin-left: 78%;
+    margin-top: 2.6%;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    font-family: montserrat;
+    font-style: bold;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdown-content a:hover {background-color: #9FB2F3}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/*Dropdown Buttons for Portfolio end here*/
+
+/*Content starts here*/
+.box h1 {
+    font-family: CenturyGothicBold;
+    font-size: 48px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+}
+
+.more{
+    display: flex;
+    align-content: flex-end;
+    justify-content: flex-end;
+    margin-right: 25px;
+}
+
+button {
+    font-family: montserrat;
+    font-size: 24px;
+    background-color: #D9D9D9;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    display: flex;
+}
+
+.more a {
+    text-decoration: none;
+}
+
+button:hover{
+    background-color: #9FB1F3;
+}
+/*Content ends here*/
+/*Gallery Portfolio starts here*/
+.portfolio {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -10%;
+    margin-bottom: -2%;
+}
+
+.container {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+/*Illustration starts here*/
+.card1 {
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.card1 > .row2 {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card1 > .row2 > .icon {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.card1 > .row2 > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+.description {
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-left: -20%;
+}
+
+.description p {
+    color: white;
+    padding-top: -5px;
+    margin-top: -20px;
+    margin-left: 25%;
+}
+
+.description h4 {
+    text-transform: uppercase;
+    margin-left: 25%;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 400px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.card1[for="c1"] {
+    background-image:url(images/portfolio/1.jpg)
+}
+
+.card1[for="c2"] {
+    background-image:url(images/portfolio/2.png)
+}
+
+.card1[for="c3"] {
+    background-image:url(images/portfolio/3.jpg)
+}
+
+.card1[for="c4"] {
+    background-image:url(images/portfolio/4.jpg)
+}
+/*Illustration ends here*/
+/*Photography starts here*/
+.card2 {
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.card2 > .row3 {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card2 > .row3 > .icon {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.card2 > .row3 > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+.description {
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-left: -20%;
+}
+
+.description p {
+    color: white;
+    padding-top: -5px;
+    margin-top: -20px;
+    margin-left: 25%;
+}
+
+.description h4 {
+    text-transform: uppercase;
+    margin-left: 25%;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 400px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.card2[for="c5"] {
+    background-image:url(images/portfolio/5.jpg)
+}
+
+.card2[for="c6"] {
+    background-image:url(images/portfolio/6.JPG)
+}
+
+.card2[for="c7"] {
+    background-image:url(images/portfolio/7.JPG)
+}
+
+.card2[for="c8"] {
+    background-image:url(images/portfolio/8.JPG)
+}
+/*Photography ends here*/
+/*Poetry starts here*/
+.card3 {
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.card3 > .row4 {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card3 > .row4 > .icon {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.card3 > .row4 > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+.description {
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-left: -20%;
+}
+
+.description p {
+    color: white;
+    padding-top: -5px;
+    margin-top: -20px;
+    margin-left: 25%;
+}
+
+.description h4 {
+    text-transform: uppercase;
+    margin-left: 25%;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 400px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.card3[for="c9"] {
+    background-image:url(images/portfolio/9.jpg)
+}
+
+.card3[for="c10"] {
+    background-image:url(images/portfolio/10.jpg)
+}
+
+.card3[for="c11"] {
+    background-image:url(images/portfolio/11.jpg)
+}
+
+.card3[for="c12"] {
+    background-image:url(images/portfolio/12.jpg)
+}
+/*Poetry ends here*/
+/*Gallery Portfolio ends here*/
